@@ -3,9 +3,22 @@
   <head>
     <meta charset="utf-8">
     <title>Дома</title>
+    <link rel="stylesheet" href={% static 'css/styles.css' %} type="text/css"/>
   </head>
   <body>
-    <h1>Тестовая страница</h1>
-    <p>Дома</p>
+    <table>
+      <tr id = 'title'>
+        <td class = 'name'>Название дома</td>
+        <td class = 'description'>Описание дома</td>
+        <td class = 'area'>Площадь дома</td>
+      </tr>
+     {% for i in xyz  %}
+      <tr>
+        <td class = 'name'>{{ i.house_name }}</td>
+        <td class = class = 'description'>{{ i.house_description }}</td>
+        <td class = 'area'>{{ i.house_area }}</td>
+      </tr>
+     {% endfor %}
+  </table>
   </body>
 </html>
